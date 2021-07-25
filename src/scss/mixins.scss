@@ -1,0 +1,31 @@
+@mixin fontCreate($name, $weight, $url, $style: normal) {
+    @font-face {
+        font-family: $name;
+        font-weight: $weight;
+        font-style: $style;
+        src: url("#{$url}.woff2") format("woff2"),
+             url("#{$url}.woff") format("woff"),
+             url("#{$url}.ttf") format("truetype"),
+             url("#{$url}.eot") format("embedded-opentype");
+    }
+}
+
+@mixin usePageText($size: 1.6rem, $color: #fff, $weight: 300, $line-height: 2.4rem){    
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $line-height;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+    $k: ($f-max - $f-min)/($v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+  
+    $b: $b * 1px;
+  
+    @return calc( #{$k} * 100vw + #{$b} );
+}
+
+@function calcSize($size, $per){
+    @return $size * ($per / 100);
+}

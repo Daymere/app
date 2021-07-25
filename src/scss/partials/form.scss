@@ -1,0 +1,210 @@
+.form{    
+    width: 100%;
+}
+.form__wrapper{    
+    margin-top: 3.8rem;
+    max-width: 66.3rem;
+    
+    @media (max-width: $bp-768){
+        max-width: calcSize(66.3rem, 85);
+    }
+
+    @media (max-width: $bp-414){
+        border-radius: 1.3rem;
+        padding: 1.8rem 2.8rem;
+    }
+}
+.form__selector{    
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 25%;
+    text-transform: uppercase;    
+    background: #07213D;
+    margin-left: 0.9rem;
+    border-radius: .7rem;
+    position: relative;
+
+    &:after{
+        margin-left: 2rem;
+        content: "";
+        display: block;
+        width: 1.3rem;
+        height: .8rem;
+        background: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c3ZnanM9Imh0dHA6Ly9zdmdqcy5jb20vc3ZnanMiIHZlcnNpb249IjEuMSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA0MDQuMzA4IDQwNC4zMDkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPHBhdGggZD0iTTAsMTAxLjA4aDQwNC4zMDhMMjAyLjE1MSwzMDMuMjI5TDAsMTAxLjA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiIvPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4K);
+    }
+
+    @media (max-width: $bp-565){
+        margin: 1.5rem .7rem 0;
+        border: .1rem solid #29B2FF;
+        flex: 0 0 100%;
+        height: 5.4rem;
+        min-height: 5.4rem;
+
+        justify-content: center;
+
+        &:after{
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+        }
+    }
+    @media (max-width: $bp-414){
+        height: 4.7rem;
+        min-height: 4.7rem;       
+        margin: 1rem 0 0; 
+    }
+}
+
+.form__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_submit{
+        margin-top: 1.7rem;
+    }
+}
+.form__suptext{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    white-space: nowrap;
+
+    @media (max-width: $bp-768){
+        font-size: 1.6rem;
+    }
+    @media (max-width: $bp-565){
+        font-size: 1.4rem;
+    }
+}
+
+.form__container{
+    margin-top: 1.8rem;
+    display: flex;
+}
+
+.form__row{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $bp-768){
+        margin-top: 1.6rem;
+    }
+    @media (max-width: $bp-565){
+        margin-top: 1rem;
+        &:not(.form__row_half){
+            flex-direction: column;
+        }
+    }
+}
+.form__row_half{
+    .form__item + .form__item{
+        margin-left: 1.8rem;
+    }
+    .form__item{
+        flex: 0 0 calc(50% - .9rem);
+    }
+    @media (max-width: $bp-565){
+        margin-top: 2.3rem;
+    }
+
+    @media (max-width: $bp-414){
+        flex-direction: column;
+
+        .form__item + .form__item{
+            margin-left: 0;
+            margin-top: 1.5rem;
+        }
+    }
+}
+.form__field{
+    max-height: 6.1rem;
+    height: 6.1rem;
+    flex-grow: 1;
+    padding: 0 1.5rem;
+    border-radius: .7rem;
+
+    display: flex;
+    align-items: center;
+
+    background: #07213D;
+
+    @media (max-width: $bp-768){
+        max-height: 5.4rem;
+        height: 5.4rem;
+    }
+    
+    @media (max-width: $bp-414){
+        height: 4.7rem;
+        min-height: 4.7rem;    
+        padding: 0 1rem;    
+    }
+}
+.form__icon{
+    max-width: 3.6rem;
+    max-height: 3.6rem;
+
+    @media (max-width: $bp-565){
+        max-width: 3rem;
+        max-height: 3rem;
+    }
+    
+    @media (max-width: $bp-414){
+        max-width: 2.6rem;
+        max-height: 2.6rem;    
+    }
+}
+.form__input{
+    flex: 1 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+.calculator__trade{
+    display: block;
+    margin: 2.5rem auto 1rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 0;
+
+    img{
+        max-width: 100%;
+    }
+
+    @media (max-width: $bp-565){
+        margin-top: 1.5rem;
+    }
+}
+.form__submit{
+    margin-top: 2.9rem;
+    width: 100%;
+    padding: 1.3rem;
+    border-radius: 2.2rem;
+
+    font-weight: 500;
+    color: #8F9294;
+    background: #0B1839;
+
+    @media (max-width: $bp-565){
+        font-size: 1.4rem;
+    }
+}
+
+// Radio Buttons
+.form__radio{
+    
+}
+.form__radio input{}
+.form__radio label{}
